@@ -1,5 +1,15 @@
 package c12_arrays;
+/*
+    github 파일 업로드 방법
 
+    git add .  = 파일을 저장소에 올릴 준비
+
+    git status  = 어떤 파일이 변경되었는지 보여주는 명령어
+
+    git commit -m "feat: 깃허브에 올리는 메모"
+
+    git push  = 저장소에 "밀어올리는" 명령어
+ */
 import java.util.Arrays;
 
 public class ArrayTest06 {
