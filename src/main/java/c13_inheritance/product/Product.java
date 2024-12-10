@@ -27,7 +27,7 @@ public class Product extends Item{
 
     @Override
     public void setName(String name) {
-        System.out.println("Product 이름 변경 : " + name);
+        System.out.println("Product 제품명 변경 : " + name);
         super.setName(name);
     }
 
@@ -61,7 +61,7 @@ public class Product extends Item{
     }
 
     public void displayInfo(){
-        System.out.println("제품 명 : " + getName() + "\n카테고리 : " + getCategory());
+        System.out.println("제품명 : " + getName() + "\n카테고리 : " + getCategory());
         System.out.println("가격 : " + getPrice() + "\n재고 : " + getStock());
 
     }
