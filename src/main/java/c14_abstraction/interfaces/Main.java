@@ -1,4 +1,5 @@
 package c14_abstraction.interfaces;
+
 /*
     인터페이스(interfaces)
         인터페이스는 자바에서 클래스가 구현해야하는 '메서드'들의 집합을 정의하는 일종의 규약(protocol)
@@ -55,28 +56,57 @@ public class Main {
             다만, 여태까지와의 차이점은 new 클래스2명(), new 클래스3명() 에 해당하는 객체명이 없을 뿐
 
          */
-        RemoteController remoteController = new RemoteController(new PowerButton(),new ChannelDownButton(),new ChannelUpButton(),new VolumeUpButton(),new VolumeDownButton());
+        RemoteController remoteController = new RemoteController(new PowerButton(), new ChannelDownButton(), new ChannelUpButton(), new VolumeUpButton(), new VolumeDownButton());
 
         remoteController.onPressedPowerButton();
 //        remoteController.onPressedPowerButton();
 //        remoteController.onPressedPowerButton();
-
+        System.out.println("----------Channel--------------");
         remoteController.onPressedChannelDownButton();
         remoteController.onDownChannelDownButton();
         remoteController.onPressedChannelUpButton();
         remoteController.onUpChannelUpButton();
 
+        /*
+            1. VolumeDownButton, VolumeUpButton 클래스를 만들고 method 구현
+            2. RemoteController.java 의 필드에 위에서만든 클래스들의 객체 추가
+            3. RemoteController.java의 All 만족하기 위해 생성자 수정
+            4. VolumeDownButton, VolumeUpButton 에 있는 메서드들을 RemoteController.java 에 재구현
+            5. Main 으로 넘어와서 볼륨 한칸 내리기, 계속 내리기, 한칸 올리기, 계속 올리기
+
+
+            추가 과제
+
+            온도 조절 버튼과 에어컨 리모콘 구현하기
+
+            TemperatureDownButton, TemperatureUpButton, AirConditionerController.java 클래스들을 만들어서
+            Main 에 AirConditionerController 의 객체 생성한 후
+
+            전원이 켜졌습니다.
+            전원이 꺼졌습니다.
+
+            온도를 한 칸 내립니다.
+            온도를 계속 내립니다.
+
+            온도를 한 칸 올립니다.
+            온도를 계속 올립니다.
+        */
+        // Down
+        System.out.println("---------Volume-----------");
         remoteController.onPressedVolumeDownButton();
         remoteController.onDownVolumeDownButton();
+        // Up
         remoteController.onPressedVolumeUpButton();
         remoteController.onUpVolumeUpButton();
 
+        System.out.println("--------Temperature-----------");
+        AirConditionerController airConditionerController = new AirConditionerController(new PowerButton(), new TemperatureDownButton(), new TemperatureUpButton());
+        airConditionerController.onPressedPowerButton();
+        airConditionerController.onPressedTemperatureUpButton();
+        airConditionerController.onUpTemperatureUpButton();
+        airConditionerController.onPressedTemperatureDownButton();
+        airConditionerController.onDownTemperatureDownButton();
+        airConditionerController.onPressedPowerButton();
+
     }
 }
-/*
-    1. VolumeDownButton, VolumeUpButton 클래스를 만들고 method 구현
-    2. RemoteController.java 의 필드에 위에서만든 클래스들의 객체 추가
-    3. RemoteController.java의 All 만족하기 위해 생성자 수정
-    4. VolumeDownButton, VolumeUpButton 에 있는 메서드들을 RemoteController.java 에 재구현
-    5. Main 으로 넘어와서 볼륨 한칸 내리기, 계속 내리기, 한칸 올리기, 계속 올리기
- */
