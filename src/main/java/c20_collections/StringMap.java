@@ -91,5 +91,9 @@ public class StringMap {
         Collection<String> values = map.values();
         System.out.println("values 들 : " + values);
         System.out.println(values.getClass());  // List 나 Set 이 아니라 Values 라는 클래스에 해당
+
+        /*
+            students 패키지 내에 StudentSet, StudentMap 만드시고 Main 적용
+         */
     }
 }
