@@ -67,7 +67,7 @@ public class JSON01 {
                 주요 클래스 :
                     Gson : 변환을 위해 사용되는 주요 클래스
                     GsonBuilder : Gson 인스턴스에 대한 사용자 정의 구성을 허용 -> 그래서 prettyPrinting
-                    JsonObject : JSON 객체를 나타냄 (즉, Java 에서 사용)
+                    JsonObject : JSON 객체를 나타냄 (즉, Java 에서 사용).
          */
     }
 }
